@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./up/css/main-style.css" />
+
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+  <body>
+    <div class="back">
+      <img
+        src="./images/bg-desktop-dark.jpg"
+        alt="todo image"
+        class="top__image"
+      />
+    </div>
+    <div class="container">
+      <div class="todo">
+        <h1 class="todo--text">TODO</h1>
+        <button class="theme">
+          <img src="./images/icon-sun.svg" class="theme-icon" />
+        </button>
+      </div>
+      <form class="form--todo">
+        <input
+          type="text"
+          placeholder="Create a new todo..."
+          class="new--todo"
+        />
+      </form>
+      <div class="main">
+        <div class="todos"></div>
+        <div class="footer">
+          <p><span class="number">0</span> items left</p>
+          <div class="sorting">
+            <button class="btn all btn-checked">All</button>
+            <button class="btn active">Active</button>
+            <button class="btn completed">Completed</button>
+          </div>
+          <button class="btn clear">Clear Completed</button>
+        </div>
+      </div>
+      <p class="drop--text">Drag and drop to reorder list</p>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

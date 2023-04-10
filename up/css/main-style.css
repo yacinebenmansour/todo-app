@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&family=Roboto:wght@700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+html[data-theme=dark] {
+  --color-primary: hsl(235, 21%, 11%);
+  --color-secondary: hsl(235, 24%, 19%);
+  --color-tertiary: hsl(234, 39%, 85%);
+}
+
+html[data-theme=light] {
+  --color-primary: hsl(0, 0%, 98%);
+  --color-secondary: hsl(0, 0%, 98%);
+  --color-tertiary: hsl(235, 21%, 11%);
+}
+
+body {
+  background-color: var(--color-primary);
+  position: relative;
+  font-size: 62.5%;
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  box-shadow: 0.1px 0.8px 1.9px rgba(0, 0, 0, 0.052), 0.3px 1.9px 4.3px rgba(0, 0, 0, 0.075), 0.5px 3.4px 7.7px rgba(0, 0, 0, 0.092), 0.8px 5.6px 12.8px rgba(0, 0, 0, 0.108), 1.3px 9.3px 21.2px rgba(0, 0, 0, 0.125), 2.3px 16.2px 37px rgba(0, 0, 0, 0.148), 5px 35px 80px rgba(0, 0, 0, 0.2);
+}
+
+.back {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+.top__image {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  position: absolute;
+  width: 550px;
+  margin-top: 10vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.todo--text {
+  font-family: "Roboto", sans-serif;
+  font-size: calc(2rem + 2vw);
+  font-weight: bold;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 98%);
+  letter-spacing: 1.2rem;
+}
+
+.todo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.theme {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.new--todo {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  height: 55px;
+  width: 100%;
+  background-color: var(--color-secondary);
+  border: none;
+  border-radius: 0.3rem;
+  color: hsl(234, 39%, 85%);
+  padding: 0 1rem;
+  margin-bottom: 2rem;
+}
+
+.new--todo::-moz-placeholder {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+}
+
+.new--todo::placeholder {
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+}
+
+.new--todo:focus {
+  outline: none;
+}
+
+.item {
+  font-family: "Quicksand", sans-serif;
+  padding: 1rem 1rem;
+  background-color: var(--color-secondary);
+  display: flex;
+  gap: 1rem;
+  color: var(--color-tertiary);
+  font-size: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.1rem solid hsl(237, 14%, 26%);
+}
+.item .aaa {
+  display: flex;
+  gap: 1rem;
+}
+.item .check {
+  height: 1.5rem;
+  width: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 0.1rem solid hsl(233, 14%, 35%);
+  cursor: pointer;
+}
+.item .check img {
+  opacity: 0;
+}
+.item--text {
+  cursor: pointer;
+}
+.item .cross {
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  opacity: 0;
+}
+.item:hover .cross {
+  opacity: 1;
+}
+
+.item-checked .check {
+  background-image: linear-gradient(45deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  border: none;
+}
+.item-checked .check img {
+  opacity: 1;
+}
+.item-checked .item--text {
+  color: hsl(233, 14%, 35%);
+  text-decoration: line-through;
+}
+
+.footer {
+  font-family: "Quicksand", sans-serif;
+  padding: 1rem 1rem;
+  background-color: var(--color-secondary);
+  gap: 1rem;
+  font-size: 1rem;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: hsl(233, 14%, 35%);
+  font-weight: 500;
+  border-radius: 0 0 0.3rem 0.3rem;
+}
+
+.btn {
+  font-family: "Quicksand", sans-serif;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: hsl(233, 14%, 35%);
+  font-weight: 500;
+}
+.btn:hover {
+  color: var(--color-tertiary);
+}
+
+.btn-checked {
+  color: hsl(220, 98%, 61%);
+}
+
+.drop--text {
+  font-family: "Quicksand", sans-serif;
+  color: hsl(233, 14%, 35%);
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}/*# sourceMappingURL=main-style.css.map */
